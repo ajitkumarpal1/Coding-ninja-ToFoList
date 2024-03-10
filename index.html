@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ToDoList</title>
+
+</head>
+
+<body>
+    <div class="d-flex h-w-100">
+        <div class="center-by-margin card">
+            <div class="input-box">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <input class="todo-input" type="text" id="todo-list-item" placeholder="Type your ToDoList">
+                <i style="display: none;" id="add-list" class="fa fa-plus-square-o cursor-p"></i>
+            </div>
+            <div class="d-flex com-cle-Status" style="justify-content: space-between;">
+                <div id="select-all" class="d-flex cursor-p" style="gap: 15px;">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <samp >Complete all task</samp>
+                </div>
+
+                <samp class="cursor-p" id="delete-complited">Clear completed</samp>
+            </div>
+            <hr>
+            <div>
+                <ul id="todo-ul" class="todo-ul">
+
+                </ul>
+            </div>
+            <hr>
+            <div class="d-flex com-cle-Status" style="justify-content: space-between;">
+                <div class="d-flex" style="gap: 15px;">
+                    <samp><b style="color: rgb(96, 80, 80);" id="tasks-left">0</b> tasks left</samp>
+                </div>
+                <div>
+                    <samp id="all">All</samp>,
+                    <samp id="uncompleted">Uncompleted</samp>,
+                    <samp id="completed">Completed</samp>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/script/index.js"></script>
+</body>
+
+</html>

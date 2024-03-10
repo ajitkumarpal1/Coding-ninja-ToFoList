@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.h-w-100 {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #CFD4E0;
+}
+
+.d-flex {
+
+    display: flex;
+}
+
+.center-by-margin {
+
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 200px;
+    width: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  2px 2px 10px 0px;
+}
+
+.todo-input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 120%;
+}
+
+.input-box>i {
+    font-size: 190%;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 60px;
+    padding: 10px;
+    background-color: #EBEFF0;
+    border-radius: 10px;
+}
+
+.checkbox-wrapper>input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.checkbox-wrapper>label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    font-size: 150%;
+}
+
+.checkbox-wrapper>label>span {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: border .2s linear;
+}
+
+.checkbox-wrapper:hover>label>span {
+    border: 5px solid black;
+}
+
+.checkbox-wrapper>input[type=checkbox]:checked+label>span {
+    border: 5px solid black;
+    background-color: rgb(127, 127, 209);
+}
+
+.com-cle-Status {
+    margin: 15px 10px;
+    color: #7ea4ae;
+}
+
+hr {
+    border: 1px solid rgb(221, 243, 242);
+    height: 0.1px;
+}
+
+.todo-ul {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    li {
+        margin: 10px 0;
+    }
+
+    label {
+        width: 100%;
+        /* outline: 2px solid black; */
+    }
+}
+
+.delet-me {
+    display: none !important;
+    padding: 0 10px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 50%;
+    border: 3px solid black;
+    
+}
+
+.todo-ul>li:hover>.checkbox-wrapper>.delet-me {
+    display: block !important;
+    cursor: pointer;
+}
+
+.cursor-p {
+    cursor: pointer;
+}
