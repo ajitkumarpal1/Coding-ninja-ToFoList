@@ -4,6 +4,7 @@ const todolistarray = [];
 const tasksLeft = document.querySelector("#tasks-left");
 const selectAll = document.getElementById("select-all");
 const deleteComplited = document.querySelector("#delete-complited")
+const todoUl = document.querySelector("#todo-ul")
 function streamToHtmlElement(streamContent) {
     // Assuming streamContent is a string representing HTML content
     const parser = new DOMParser();
@@ -23,7 +24,7 @@ const liElement = streamToHtmlElement(`<li>
                     <i class="fa fa-times delet-me" aria-hidden="true"></i>
                 </div>
                 </li>`)
-const todoUl = document.querySelector("#todo-ul")
+
 const uplodeTodoUl = () => {
     let copy = liElement.cloneNode(true);
     let tampObj = {
@@ -75,18 +76,18 @@ function tasksLeftFun() {
     tasksLeft.innerHTML = todolistarray.length - allSelected.length
 }
 selectAll.addEventListener("click", function () {
-    let allSelected = document.querySelectorAll("input[name=check]");
-    allSelected.forEach(element => {
-        element.checked = true;
+    todolistarray.forEach(element => {
+        element.selected = true;
+        element.element.querySelector("input[name=check]").checked = true;
     });
     all()
 });
 deleteComplited.addEventListener("click",function(){
-    todolistarray.forEach((element, index) => {
+    [...todolistarray].reverse().forEach((element, index) => {
         if(element.selected){
             element.element.remove()
-            alert(index)
-            todolistarray.splice(index,1)
+            
+            todolistarray.splice(index,1) 
         }
     });
     all()
